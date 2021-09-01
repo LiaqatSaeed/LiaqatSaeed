@@ -1,6 +1,10 @@
-### Hi there 👋
+### Hi Folks 👋 ![](https://komarev.com/ghpvc/?username=LiaqatSaeed)
 
-![](https://komarev.com/ghpvc/?username=LiaqatSaeed)
+Full stack software engineer with 5+ years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB |ASP.NET MVC | SQL | MYSQL | UI/UX) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.
+
+I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.
+
+### 🔭 I’m currently working on RealStore - Typescript and my Onion architecture on Node Realstore.Api
 
 <!--
 **LiaqatSaeed/LiaqatSaeed** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
