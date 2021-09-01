@@ -8,7 +8,7 @@ I feel that a man can achieve anything in the field if his technical skills are 
 
 ## Some Past Projects Demos
 
-1. Kickit Task Management App `React Native`
+1. Kickit Task Management App `React Native` `Firebase` `Redux`
 <div style="width:10px;height:10px">
 https://www.loom.com/share/ac20d60887d749f7b33e62849ec4cf0d
 </div>
