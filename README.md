@@ -1,4 +1,4 @@
-### Hi Folks 👋 ![](https://komarev.com/ghpvc/?username=LiaqatSaeed&color=#e91e63)
+### Hi Folks 👋 ![](https://komarev.com/ghpvc/?username=LiaqatSaeed&color=e91e63)
 
 Full stack software engineer with 6 years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB |ASP.NET MVC | SQL | MYSQL | UI/UX) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.
 
