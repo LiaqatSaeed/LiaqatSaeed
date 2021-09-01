@@ -10,7 +10,7 @@ I feel that a man can achieve anything in the field if his technical skills are 
 
 1. Kickit Task Management App `React Native`
 <div style="width:10px;height:10px">
-![test](https://www.loom.com/share/ac20d60887d749f7b33e62849ec4cf0d)
+https://www.loom.com/share/ac20d60887d749f7b33e62849ec4cf0d
 </div>
 
 <!--
