@@ -6,8 +6,6 @@ I feel that a man can achieve anything in the field if his technical skills are 
 
 ### 🔭 I’m currently working on RealStore - Typescript and my Onion architecture on Node Realstore.Api
 
-## Some Past Projects Demos
-
 <!--
 **LiaqatSaeed/LiaqatSaeed** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
