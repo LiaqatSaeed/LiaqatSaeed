@@ -1,4 +1,4 @@
-import { createContext, useContext } from 'react';
+import { createContext } from 'react';
 import appData from '../db/data.json';
 
 export const AppContext = createContext(appData);

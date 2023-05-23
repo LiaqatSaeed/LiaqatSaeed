@@ -1,4 +1,4 @@
-import cx from 'classNames';
+import cx from 'classnames';
 import { useState } from 'react';
 import { useScrollDirection } from '../hooks';
 
