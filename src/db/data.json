@@ -1,0 +1,162 @@
+{
+  "name": "Liaqat Saeed",
+  "title": "Fullstack Engineer",
+  "summary": "Full Stack Software Engineer ( MERN | TypeScript | REACT | REACT Native | NODE | EXPRESS | NEST | GRAPHQL | REMOTE ONLY)",
+  "about": "Full stack software engineer with 7 years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB | NEST) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.",
+  "about_quote": "I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.",
+  "projects": [
+    {
+      "title": "React Native: Niazi Foods E-Commerce App",
+      "demo_url": "https://www.loom.com/embed/970bd76808a148ad82f863097612f942?autoplay=1"
+    },
+    {
+      "title": "React Native: KickIt a Task Management App",
+      "demo_url": "https://www.loom.com/embed/ac20d60887d749f7b33e62849ec4cf0d?autoplay=1"
+    },
+    {
+      "title": "React : Forex174 analysis tool for Forex",
+      "demo_url": "https://www.loom.com/embed/e7ca30b0f1b94638b234995d06cf174d?autoplay=1"
+    },
+    {
+      "title": "React : Functional Testing with React-TestCafe",
+      "demo_url": "https://www.loom.com/embed/2d93948ac33c4fa6b3aeb186fda8c631"
+    }
+  ],
+  "timeline": {
+    "experience": [
+      {
+        "period": "Present",
+        "job_title": "Full Stack Engineer (Plugin)",
+        "location": "remote",
+        "company_name": "LottieFiles",
+        "description": "As a Full Stack Engineer Plugins team, I am responsible for building to create Lottie Integration to different platforms like Shopify, WordPress, Google Workspace and many more. Below I have listed most of my contributions to LottieFiles."
+      },
+      {
+        "period": "2022",
+        "job_title": "React Developer (Contract)",
+        "location": "remote",
+        "company_name": "Distributed",
+        "description": "Worked here as Elastic Team member. Worked with different Clients from Distributed as a React Developer."
+      },
+      {
+        "period": "2022",
+        "job_title": "Senior Fullstack Engineer",
+        "location": "Islamabad, Pakistan",
+        "company_name": "CodeSauces",
+        "description": "As a Full Stack Engineer here I am responsible of Managing and Developing several projects. Developing Mobile and Web Apps for International Clients USA, Canada, Australia, Italy, UK, UAE."
+      },
+      {
+        "period": "2021",
+        "job_title": "Senior Frontend Developer",
+        "location": "Canada",
+        "company_name": "XnRel Inc.",
+        "description": "As a Frontend Developer my responsibilities were to create frontend for a SaaS based Student Information System which a web application. Gathering Client requirements and turning them into functional User Interface in React."
+      },
+      {
+        "period": "2019",
+        "job_title": "Senior Software Engineer",
+        "location": "Islamabad, Pakistan",
+        "company_name": "Caliber Technology Inc.",
+        "description": "Full Stack Development, Team Management, Mentoring Junior Developers, Clients Engagement"
+      },
+      {
+        "period": "2016",
+        "job_title": "Web Developer",
+        "location": "Carrollton, TX, Pakistan Office",
+        "company_name": "MaxRemind Inc",
+        "description": "Worked on a Hospice Product Full stack development. (JQuery, JavaScript, Html, Css, ASP.Net MVC, SQL)"
+      },
+      {
+        "period": "2015",
+        "job_title": "Asp.Net Internship",
+        "location": "Islamabad, Pakistan",
+        "company_name": "Untangle Solution",
+        "description": "Internship: Worked on Dentist Desktop Application, (C#, WPF)"
+      }
+    ],
+    "projects": [
+      {
+        "period": "2023",
+        "title": "LottieFiles for Bubble.io",
+        "url": "https://bubble.io/plugin/lottiefiles-1676280573614x891677842206097400?ref=lottiefiles.com",
+        "company_name": "LottieFiles",
+        "description": " Developed Lottie Bubble for Bubble.io community to easily add Lottie Animation to their Websites and Application.",
+        "skills": "( Javascript )"
+      },
+      {
+        "period": "2022",
+        "title": "LottieFiles for Microsoft M365",
+        "url": "https://appsource.microsoft.com/en-us/product/office/WA200003732?tab=Overview&exp=ubp8",
+        "company_name": "LottieFiles",
+        "description": "Developed Guttenberg Block for WordPress Community to easily add Lottie Animation on their WordPress websites.",
+        "skills": "(React, TypeScript, Tailwind, graphql, graphql-request, urql, eslint, Php, MySQL, API Integration)"
+      },
+      {
+        "period": "2022",
+        "title": "LottieFiles for WordPress (Plugin)",
+        "url": "https://wordpress.org/plugins/lottiefiles/",
+        "company_name": "LottieFiles",
+        "description": "Added features and bug fixing on M365 plugin.",
+        "skills": "(React, Typescript, graphql, urql, eslint, ffmpeg.wasm)"
+      },
+      {
+        "period": "2021",
+        "title": "Forex174.com",
+        "url": "https://forex174.com",
+        "company_name": "CodeSauces",
+        "description": "Developed a tool that will give Analysis and Forecast of any Forex Trading Currency.",
+        "skills": "( React.js, Redux, Nodejs, Express, MongoDB, AWS, LetsEncrypt, EC2, Route53, GoDaddy  )"
+      },
+      {
+        "period": "2021",
+        "title": "DirectRent.ai",
+        "url": "https://directrent.ai",
+        "company_name": "CodeSauces",
+        "description": "Property Renting App which facilitates Landlords & Tenants.",
+        "skills": "( Mongo DB, Express, React, Redux, Node, AWS, Wix, Firebase, GoDaddy )"
+      },
+      {
+        "period": "2020",
+        "title": "Niazi Foods (Mobile App)",
+        "url": "https://apps.apple.com/gb/app/niazi/id1500941843",
+        "company_name": "CodeSauces",
+        "description": "An E-Commerce App Developed for a mart operating in UK.",
+        "skills": "( React Native, Redux, API Integration )"
+      },
+      {
+        "period": "2019",
+        "title": "TravelGny.com",
+        "url": "http://travelgny.com",
+        "company_name": "Caliber Technology Inc.",
+        "description": "Travel Search Engine Which Provides Listing & Product Details for Travel Services Like Travel Agents, Tour Operators, etc.",
+        "skills": "( React, Node.js, MongoDB, API Integration )"
+      }
+    ]
+  },
+  "footer": {
+    "phone": "+923125234889",
+    "email": "liaqatsaeed007@gmail.com",
+    "socials": [
+      {
+        "title": "LinkedIn",
+        "url": "https://pk.linkedin.com/in/liaqat-saeed",
+        "icon": "LinkedIn"
+      },
+      {
+        "title": "WhatsApp",
+        "url": "https://api.whatsapp.com/send?phone=92+3124234889",
+        "icon": "WhatsApp"
+      },
+      {
+        "title": "StackOverflow",
+        "url": "https://stackoverflow.com/users/7343216/liaqat-saeed",
+        "icon": "StackOverflow"
+      },
+      {
+        "title": "Github",
+        "url": "https://github.com/LiaqatSaeed",
+        "icon": "Github"
+      }
+    ]
+  }
+}

@@ -1,0 +1,18 @@
+@import url(./unicons.scss);
+@import url(./owl.carousel.min.scss);
+@import url(./owl.theme.default.min.scss);
+@import url(./tooplate-style.scss);
+
+.navbar {
+  position: fixed;
+  top: 0px;
+  background-color: white ;
+  height: 6rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 500ms;
+  z-index: 2;
+}
+.down {
+  top: -6rem;
+}
