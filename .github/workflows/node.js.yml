@@ -32,6 +32,7 @@ jobs:
    
     - run: pnpm i
     - run: pnpm run predeploy
-    - run: git config --global user.email "liaqatsaeed007@gmail.com"
-    - run: git config --global user.name "Liaqat Saeed"
-    - run: pnpm run deploy
+    - name: Deploy 🚀
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: build # The folder the action should deploy.
