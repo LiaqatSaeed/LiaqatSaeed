@@ -6,6 +6,10 @@
   "about_quote": "I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.",
   "projects": [
     {
+      "title": "React: LottieFiles for WordPress (Plugin)",
+      "demo_url": "https://www.youtube.com/embed/z48jdXjwVo4?autoplay=1&controls=0"
+    },
+    {
       "title": "React Native: Niazi Foods E-Commerce App",
       "demo_url": "https://www.loom.com/embed/970bd76808a148ad82f863097612f942?autoplay=1"
     },
