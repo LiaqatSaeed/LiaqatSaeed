@@ -26,19 +26,19 @@ export const AboutSection = () => {
               <h1 className='animated animated-text'>
                 <span className='mr-2'>Hey folks, I'm</span>
                 <div className='animated-info'>
-                  <span className='animated-item'>{name}</span>
-                  <span className='animated-item'>{title}</span>
+                  <h1 className='animated-item'>{name}</h1>
+                  <h1 className='animated-item'>{title}</h1>
                 </div>
               </h1>
 
               <p>{summary}</p>
 
               <div className=''>
-                <h3>
+                <h2>
                   <span>
                     <strong>Objective</strong>
                   </span>
-                </h3>
+                </h2>
                 <p>{about}</p>
                 <p>{about_quote}</p>
               </div>
