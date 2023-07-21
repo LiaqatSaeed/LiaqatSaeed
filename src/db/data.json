@@ -1,18 +1,18 @@
 {
   "name": "Liaqat Saeed",
-  "title": "Fullstack Engineer (React, Node, JavaScript)",
   "meta": {
-    "title": "Some Meta Title",
-    "description": "Fullstack Engineer (React, Node, JavaScript) with 7 years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB | NEST) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.",
+    "author": "Liaqat Saeed",
+    "title": "Fullstack Engineer (React, Node, JavaScript, TypeScript)",
+    "description": "Fullstack Engineer (React, Node, JavaScript, TypeScript) with 7 years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB | NEST) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.",
     "canonical": "https://liaqatsaeed6777.com/",
     "meta": {
       "charset": "utf-8",
       "name": {
-        "keywords": "react,node,javascript,fullstack engineer, frontend developer"
+        "keywords": "react,node,javascript,typescript,jquery,fullstack engineer, frontend developer"
       }
     }
   },
-  "summary": "Fullstack Engineer ( MERN | TypeScript | REACT | REACT Native | NODE | EXPRESS | NEST | GRAPHQL | REMOTE ONLY)",
+  "summary": "Fullstack Engineer ( MERN | TypeScript | REACT | JavaScript | JQuery | REACT Native | NODE | EXPRESS | NEST | GRAPHQL )",
   "about": "Fullstack Engineer  (React, Node, JavaScript) with 7 years of experience building scalable web and mobile applications with (Typescript | React.js | React-Native | Node | Express | MongoDB | NEST) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.",
   "about_quote": "I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.",
   "projects": [
