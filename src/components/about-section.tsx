@@ -26,8 +26,8 @@ export const AboutSection = () => {
               <h1 className='animated animated-text'>
                 <span className='mr-2'>Hey folks, I'm</span>
                 <div className='animated-info'>
-                  <h1 className='animated-item'>{name}</h1>
-                  <h1 className='animated-item'>{title}</h1>
+                  <h1 className='animated-item m-0'>{name}</h1>
+                  <h1 className='animated-item m-0'>{title}</h1>
                 </div>
               </h1>
 
