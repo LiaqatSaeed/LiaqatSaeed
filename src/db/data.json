@@ -104,16 +104,16 @@
         "title": "LottieFiles for Microsoft M365",
         "url": "https://appsource.microsoft.com/en-us/product/office/WA200003732?tab=Overview&exp=ubp8",
         "company_name": "LottieFiles",
-        "description": "Developed Guttenberg Block for WordPress Community to easily add Lottie Animation on their WordPress websites.",
-        "skills": "(React, TypeScript, Tailwind, graphql, graphql-request, urql, eslint, Php, MySQL, API Integration)"
+        "description": "Added features and bug fixing on M365 plugin.",
+        "skills": "(React, Typescript, graphql, urql, eslint, ffmpeg.wasm)"
       },
       {
         "period": "2022",
         "title": "LottieFiles for WordPress (Plugin)",
         "url": "https://wordpress.org/plugins/lottiefiles/",
         "company_name": "LottieFiles",
-        "description": "Added features and bug fixing on M365 plugin.",
-        "skills": "(React, Typescript, graphql, urql, eslint, ffmpeg.wasm)"
+        "description": "Developed Guttenberg Block for WordPress Community to easily add Lottie Animation on their WordPress websites.",
+        "skills": "(React, TypeScript, Tailwind, graphql, graphql-request, urql, eslint, Php, MySQL, API Integration)"
       },
       {
         "period": "2021",
