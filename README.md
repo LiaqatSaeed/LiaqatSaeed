@@ -33,7 +33,7 @@ Feel free to explore them!
 
 ## ✨ Demo
 
-- [![Calimatic - Hybrid Project](https://www.loom.com/share/c9440254d31648f682a656b5719c3338)](https://www.loom.com/share/c9440254d31648f682a656b5719c3338?sid=f8e1c05e-1913-42d0-adf1-ad21b0f90c4f)
+- [![Calimatic - Hybrid Project]](https://www.loom.com/share/c9440254d31648f682a656b5719c3338?sid=8c1d061a-8de7-4c39-bfbc-d0e77463dcd1)
 - [![React Native - RealStore App](https://www.loom.com/share/25ccb22a75e64ef5a8e720fb4d22f981)](https://www.loom.com/share/25ccb22a75e64ef5a8e720fb4d22f981?sid=46d3b478-114b-4719-9bdd-c4898722806c)
 
 ## 📫 How to Reach Me
