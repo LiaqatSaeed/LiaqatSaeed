@@ -1,22 +1,57 @@
-### Hi Folks 👋 ![](https://komarev.com/ghpvc/?username=LiaqatSaeed&color=e91e63)
+# Hi there! 👋 I'm [Your Name]
 
-Full stack software engineer with 6 years of experience building scalable web and mobile applications with (Typescript | Typegoose | React.js | React-Native | Node | Express | MongoDB | ASP.NET MVC | SQL | MYSQL | UI/UX) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.
+I'm a passionate Fullstack Engineer from Islamabad, Pakistan. Welcome to my GitHub profile! 🚀
 
-I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.
+## 🔧 Technologies & Tools
 
-### 🔭 I’m currently converting my static portfolio website to React and deploying it to gh-pages using Github Actions.
+- **Languages:** C#, TypeScript, JavaScript, HTML, CSS
+- **CSS Preprocessor:** SCSS (Sass)
+- **Frameworks:** React Native, Redux, Nest.js, ASP.NET MVC, Flask, React.js, Express.js
+- **Template Engines:** Handlebars, EJS
+- **APIs:** GraphQL (Apollo)
+- **Databases:** MySQL, MongoDB
+- **Cloud Services:** AWS (EC2, Route 53, S3), Firebase
+- **Tools:** Visual Studio Code, Git, Docker, Postman, Linear, Jira, Notion
+- **Communication:** Slack, Discord, Skype
 
-<!--
-**LiaqatSaeed/LiaqatSaeed** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+## 🌱 I'm Currently Learning
 
-Here are some ideas to get you started:
+- Nest.js
+- Python
+- Advanced JavaScript concepts
+- New React/React Native updates
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+## 🚀 Projects
+
+Here are some projects I'm proud of:
+
+- [Project 1: LottieFiles – Lottie block for Gutenberg](https://wordpress.org/plugins/lottiefiles/)
+- [Project 2: DirectRent.ai](https://directrent.ai/)
+- [Project 3: Calimatic - Hybrid Project](https://portal.calimatic.com/)
+
+Feel free to explore them!
+
+## ✨ Demo
+
+- [![Calimatic - Hybrid Project](https://www.loom.com/share/c9440254d31648f682a656b5719c3338)](https://www.loom.com/share/c9440254d31648f682a656b5719c3338?sid=f8e1c05e-1913-42d0-adf1-ad21b0f90c4f)
+- [![React Native - RealStore App](https://www.loom.com/share/25ccb22a75e64ef5a8e720fb4d22f981)](https://www.loom.com/share/25ccb22a75e64ef5a8e720fb4d22f981?sid=46d3b478-114b-4719-9bdd-c4898722806c)
+
+## 📫 How to Reach Me
+
+- LinkedIn: [Liaqat Saeed](https://pk.linkedin.com/in/liaqat-saeed)
+- Twitter: [@liaqatsaeed6777](https://twitter.com/liaqatsaeed6777)
+- Portfolio: [liaqatsaeed6777.com](https://liaqatsaeed6777.com/)
+- Youtube: [@liaqatsaeed6777](https://www.youtube.com/channel/UC4s7nfdalTSQqhSz5K0JqEw)
+- Email: liaqatsaeed007@gmail.com
+
+## 📊 GitHub Stats
+
+[![GitHub Stats](https://github-readme-stats.vercel.app/api?username=LiaqatSaeed&show_icons=true&count_private=true)](https://github.com/LiaqatSaeed)
+
+## 🌟 Fun Facts
+
+- I once participated in a football night tournament where, in a moment of sheer luck and skill, I managed to score a goal directly from a throw-in! It was a highlight of the tournament and a story that still gets shared among my teammates. ⚽🌙🎉
+- I once embarked on a challenging journey and completed a long hiking track to the K2 Base Camp. The breathtaking landscapes, the camaraderie with fellow trekkers, and the sense of accomplishment at reaching such an iconic destination made it an unforgettable expedition. 🏔️🚶‍♂️🏕️
+
+Thanks for visiting! 😊
+
