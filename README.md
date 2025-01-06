@@ -4,12 +4,12 @@ I'm a passionate Fullstack Engineer from Islamabad, Pakistan. Welcome to my GitH
 
 ## 🔧 Technologies & Tools
 
-- **Languages:** C#, TypeScript, JavaScript, HTML, CSS
+- **Languages:** C#, Node.js, TypeScript, JavaScript, HTML, CSS
 - **CSS Preprocessor:** SCSS (Sass)
-- **Frameworks:** React Native, Redux, Nest.js, ASP.NET MVC, Flask, React.js, Express.js
+- **Frameworks:** React Native, Redux, Nest.js, ASP.NET MVC, Flask, React.js, Express.js, Ionic Capacitor
 - **Template Engines:** Handlebars, EJS
 - **APIs:** GraphQL (Apollo)
-- **Databases:** MySQL, MongoDB
+- **Databases:** MySQL, MongoDB, SQL, PostgreSQL
 - **Cloud Services:** AWS (EC2, Route 53, S3), Firebase
 - **Tools:** Visual Studio Code, Git, Docker, Postman, Linear, Jira, Notion
 - **Communication:** Slack, Discord, Skype
