@@ -45,7 +45,7 @@ export const AboutSection = () => {
 
               <div className='custom-btn-group mt-4'>
                 <a
-                  href='./Liaqat_Saeed_Resume_Latest.pdf'
+                  href='./resume/Liaqat_Saeed_Resume_Latest.pdf'
                   className='btn mr-lg-2 custom-btn'
                   target="_blank"
                 >
