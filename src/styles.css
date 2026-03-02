@@ -151,6 +151,22 @@ img {
   color: var(--text);
 }
 
+.nav a.active {
+  color: var(--text);
+  position: relative;
+}
+
+.nav a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -8px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
 .header-actions {
   display: flex;
   align-items: center;
@@ -168,7 +184,7 @@ img {
 }
 
 .section {
-  padding: 90px 0;
+  padding: 50px 0;
 }
 
 .section-heading {
@@ -576,7 +592,7 @@ img {
 .section,
 .hero,
 .contact {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 50px;
 }
 
 @media (max-width: 900px) {

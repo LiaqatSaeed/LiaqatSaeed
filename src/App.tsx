@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { profile } from "./data/profile";
 import { useTheme } from "./hooks";
 
@@ -12,6 +13,41 @@ const navLinks = [
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+  const [activeSection, setActiveSection] = useState<string>("about");
+
+  useEffect(() => {
+    const sections = navLinks.map((link) =>
+      document.querySelector(link.href)
+    );
+
+    const handleScroll = () => {
+      const offset = 140;
+      const positions = sections
+        .map((section) => {
+          if (!section) return null;
+          const rect = section.getBoundingClientRect();
+          return { id: section.id, top: rect.top - offset };
+        })
+        .filter(Boolean) as { id: string; top: number }[];
+
+      const current =
+        positions
+          .filter((pos) => pos.top <= 0)
+          .sort((a, b) => b.top - a.top)[0] || positions[0];
+
+      if (current && current.id !== activeSection) {
+        setActiveSection(current.id);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [activeSection]);
 
   return (
     <div className="app">
@@ -31,7 +67,14 @@ function App() {
           </a>
           <nav className="nav" aria-label="Primary">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
+              <a
+                key={link.href}
+                href={link.href}
+                className={activeSection === link.href.slice(1) ? "active" : ""}
+                aria-current={
+                  activeSection === link.href.slice(1) ? "page" : undefined
+                }
+              >
                 {link.label}
               </a>
             ))}
