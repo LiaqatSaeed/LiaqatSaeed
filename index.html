@@ -2,7 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=5, user-scalable=yes, viewport-fit=cover"
+    />
     <meta
       name="description"
       content="Senior Full-Stack Engineer with 9+ years of experience building scalable web and mobile applications using TypeScript, React, React Native, and Node.js. Specializes in integrations, automation, and production deployments."
@@ -14,6 +17,20 @@
     <title>Liaqat Saeed | Senior Full-Stack Engineer (TypeScript, React, Node)</title>
     <link rel="canonical" href="https://liaqatsaeed6777.com/" />
 
+    <link
+      rel="preload"
+      href="./fonts/ibm-plex-sans-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="./fonts/space-grotesk-latin.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <meta property="og:title" content="Liaqat Saeed | Senior Full-Stack Engineer" />
     <meta
       property="og:description"
@@ -50,14 +67,12 @@
     <link rel="shortcut icon" href="./icons/favicon.ico" />
     <link rel="manifest" href="./icons/site.webmanifest" />
 
-    <script>
-      (function () {
-        var stored = localStorage.getItem("theme");
-        var prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
-        var theme = stored === "dark" || stored === "light" ? stored : prefersDark ? "dark" : "light";
-        document.documentElement.dataset.theme = theme;
-      })();
-    </script>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self' 'sha256-KGWUB2+B/Wz00cJ2W5LoYC4wiersy1BWCYgUZXgW+QI='; style-src 'self'; img-src 'self' data:; font-src 'self'; connect-src 'self'; base-uri 'self'; form-action 'self' mailto:; frame-ancestors 'none'; object-src 'none'; upgrade-insecure-requests; block-all-mixed-content; require-trusted-types-for 'script'; trusted-types default"
+    />
+
+    <script src="./theme.js"></script>
 
     <script type="application/ld+json">
       {
@@ -79,10 +94,9 @@
         ]
       }
     </script>
-
     <!-- Analytics placeholder: add your provider script here if needed. -->
-    <script type="module" crossorigin src="./assets/index-1dc4074a.js"></script>
-    <link rel="stylesheet" href="./assets/index-b71e047f.css">
+    <script type="module" crossorigin src="./assets/index-c3a75999.js"></script>
+    <link rel="stylesheet" href="./assets/index-70882458.css">
   </head>
   <body>
     <div id="root"></div>
