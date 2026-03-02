@@ -1,1 +1,1 @@
-export { useScrollDirection, Direction } from './use-scroll-direction';
+export { useTheme } from "./use-theme";
