@@ -14,6 +14,7 @@ const navLinks = [
 function App() {
   const { theme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState<string>("about");
+  const [copyStatus, setCopyStatus] = useState<string>("");
 
   useEffect(() => {
     const sections = navLinks.map((link) =>
@@ -48,6 +49,36 @@ function App() {
       window.removeEventListener("resize", handleScroll);
     };
   }, [activeSection]);
+
+  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const subject = name ? `Project inquiry from ${name}` : "Project inquiry";
+    const bodyLines = [
+      name && `Name: ${name}`,
+      email && `Email: ${email}`,
+      "",
+      message
+    ].filter(Boolean);
+    const mailto = `mailto:${profile.links.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    window.location.href = mailto;
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.links.email);
+      setCopyStatus("Copied!");
+      window.setTimeout(() => setCopyStatus(""), 2000);
+    } catch {
+      setCopyStatus("Copy failed");
+      window.setTimeout(() => setCopyStatus(""), 2000);
+    }
+  };
 
   return (
     <div className="app">
@@ -93,7 +124,7 @@ function App() {
         </div>
       </header>
 
-      <main id="main">
+      <main id="main" role="main">
         <section id="about" className="section hero" aria-labelledby="hero-title">
           <div className="container hero-grid">
             <div className="hero-content">
@@ -147,7 +178,7 @@ function App() {
                 </div>
               </div>
               <div className="hero-links">
-                <a href={`mailto:${profile.links.email}`}>{profile.links.email}</a>
+                <span className="contact-link">{profile.links.email}</span>
                 <a href={`tel:${profile.links.phone}`}>{profile.links.phone}</a>
                 <span>Skype: {profile.links.skype}</span>
               </div>
@@ -299,9 +330,17 @@ function App() {
               </p>
             </div>
             <div className="contact-card">
-              <a className="contact-link" href={`mailto:${profile.links.email}`}>
-                {profile.links.email}
-              </a>
+              <div className="contact-inline">
+                <span className="contact-link">{profile.links.email}</span>
+                <button
+                  className="contact-copy"
+                  type="button"
+                  onClick={handleCopyEmail}
+                  aria-live="polite"
+                >
+                  {copyStatus || "Copy email"}
+                </button>
+              </div>
               <a className="contact-link" href={`tel:${profile.links.phone}`}>
                 {profile.links.phone}
               </a>
@@ -323,12 +362,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <form
-              className="contact-form"
-              action={`mailto:${profile.links.email}`}
-              method="post"
-              encType="text/plain"
-            >
+            <form className="contact-form" onSubmit={handleContactSubmit}>
               <div className="form-row">
                 <label htmlFor="contact-name">Name</label>
                 <input
@@ -360,8 +394,8 @@ function App() {
                 />
               </div>
               <p className="form-note">
-                The form opens your default email client. If it does not, email me
-                directly at {profile.links.email}.
+                Submitting opens your default email client with a pre-filled
+                message.
               </p>
               <button className="btn primary" type="submit">
                 Send Message

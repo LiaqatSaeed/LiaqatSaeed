@@ -326,25 +326,13 @@ export const profile: Profile = {
       title: "DirectRent.ai",
       description:
         "Property renting platform with web, admin, and integrations for landlords and tenants.",
-      stack: ["React", "Node.js", "MongoDB", "AWS"],
-      links: [
-        {
-          label: "Website",
-          url: "https://directrent.ai"
-        }
-      ]
+      stack: ["React", "Node.js", "MongoDB", "AWS"]
     },
     {
       title: "Forex174",
       description:
         "Forex analysis and forecasting platform built for traders.",
-      stack: ["React", "Node.js", "MongoDB", "AWS"],
-      links: [
-        {
-          label: "Website",
-          url: "https://www.forex174.com"
-        }
-      ]
+      stack: ["React", "Node.js", "MongoDB", "AWS"]
     },
     {
       title: "Calimatic",
@@ -378,7 +366,7 @@ export const profile: Profile = {
       links: [
         {
           label: "Website",
-          url: "http://travelgny.com"
+          url: "https://travelgny.com"
         }
       ]
     }

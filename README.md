@@ -1,59 +1,42 @@
-# Liaqat Saeed Portfolio
+# Liaqat Saeed
 
-Modern, mobile-first portfolio site built with Vite + React and driven by structured resume data.
+![Location](https://img.shields.io/badge/Location-Islamabad%2C%20Pakistan-2563eb)
+![Open to Work](https://img.shields.io/badge/Open%20to%20Work-Yes-16a34a)
+![Tech Stack](https://img.shields.io/badge/Tech%20Stack-TypeScript%20%7C%20React%20%7C%20Node.js-1f2933)
 
-## Local Development
+Senior full-stack engineer with 9+ years building scalable web and mobile products. I specialize in TypeScript, React, React Native, and Node.js, with deep experience in integrations, automation (n8n), and production deployments. Based in Islamabad, Pakistan, and working remotely with global teams.
 
-1. Install dependencies
+## What I Do
 
-```bash
-pnpm install
-```
+- Build modern web and mobile applications with strong UX and performance focus.
+- Ship integration-heavy systems and workflow automation.
+- Own deployment pipelines and production infrastructure hardening.
 
-2. Start the dev server
+## Core Stack
 
-```bash
-pnpm dev
-```
+- TypeScript, React, React Native, Node.js, Express
+- PostgreSQL, MongoDB, MySQL, SQLite
+- Docker, Nginx, AWS EC2, IIS, Apache
+- REST, GraphQL, Shopify Admin API, Polaris SEP-24, EasyBit API
 
-## Build
+## Recent Experience
 
-```bash
-pnpm build
-```
+- Fullstack Integration Engineer at Mercans (Mar 2024 – Present)
+- Senior Full Stack Engineer at CodeSauces (Jun 2023 – Present)
+- Full Stack Engineer (Plugins) at LottieFiles (Jan 2022 – Jun 2023)
 
-The output will be in `dist/`.
+## Selected Work
 
-## Deploy (Static Hosting)
+- Stellar Disbursement Platform (infrastructure + modules)
+- ATM Token Wallet (App Store, Stellar API)
+- Freedom Pay Wallet (App Store, Stellar API)
+- LottieFiles plugins for WordPress, Shopify, Microsoft M365, and Bubble.io
+- DirectRent.ai, Forex174, Calimatic, Sketchfunnels, TravelGny
 
-Any static host works (Netlify, Vercel, GitHub Pages). Example with Netlify:
+## Contact
 
-```bash
-pnpm build
-```
-
-Upload the `dist/` folder as the site root.
-
-## Lighthouse Check
-
-1. Start the preview server:
-
-```bash
-pnpm preview
-```
-
-2. In another terminal, run Lighthouse (requires Chrome):
-
-```bash
-npx lighthouse http://localhost:4173 --only-categories=performance,accessibility,best-practices,seo --chrome-flags="--headless"
-```
-
-## Content Updates
-
-Primary resume data lives in `src/data/profile.ts`. Update this file to refresh the site content and links.
-
-## SEO Assets
-
-- `public/robots.txt`
-- `public/sitemap.xml`
-- `index.html` meta tags and structured data
+- Portfolio: https://liaqatsaeed6777.com/
+- Resume: https://liaqatsaeed6777.com/resume/Liaqat_Saeed_Resume.pdf
+- LinkedIn: https://www.linkedin.com/in/liaqat-saeed
+- GitHub: https://github.com/LiaqatSaeed
+- Email: liaqatsaeed007@gmail.com
