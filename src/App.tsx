@@ -69,6 +69,10 @@ function App() {
     window.location.href = mailto;
   };
 
+  const openEmailClient = () => {
+    window.location.href = `mailto:${profile.links.email}`;
+  };
+
   const handleCopyEmail = async () => {
     try {
       await navigator.clipboard.writeText(profile.links.email);
@@ -349,9 +353,9 @@ function App() {
                 <span>Skype: {profile.links.skype}</span>
               </div>
               <div className="contact-actions">
-                <a className="btn primary" href={`mailto:${profile.links.email}`}>
+                <button className="btn primary" type="button" onClick={openEmailClient}>
                   Email
-                </a>
+                </button>
                 <a
                   className="btn"
                   href={profile.links.linkedin}
@@ -415,7 +419,9 @@ function App() {
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:${profile.links.email}`}>Email</a>
+            <button className="footer-link" type="button" onClick={openEmailClient}>
+              Email
+            </button>
           </div>
         </div>
       </footer>
