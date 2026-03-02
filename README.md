@@ -1,22 +1,34 @@
-### Hi Folks 👋 ![](https://komarev.com/ghpvc/?username=LiaqatSaeed&color=e91e63)
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Full stack software engineer with 6 years of experience building scalable web and mobile applications with (Typescript | Typegoose | React.js | React-Native | Node | Express | MongoDB | ASP.NET MVC | SQL | MYSQL | UI/UX) technologies. I'm looking for a job where I can use my strong organizational skills and ability to work well with people to effective use.
+## Getting Started
 
-I feel that a man can achieve anything in the field if his technical skills are excellent.  A man with this attitude of doing anything will never face a problem. I believe I am capable of achieving anything, whether it is because of my mindset or my abilities.
+First, run the development server:
 
-### 🔭 I’m currently working on RealStore - Typescript and my Onion architecture on Node Realstore.Api
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+```
 
-<!--
-**LiaqatSaeed/LiaqatSaeed** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Here are some ideas to get you started:
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
