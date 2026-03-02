@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { profile } from "./data/profile";
 import { useTheme } from "./hooks";
 
@@ -12,6 +13,76 @@ const navLinks = [
 
 function App() {
   const { theme, toggleTheme } = useTheme();
+  const [activeSection, setActiveSection] = useState<string>("about");
+  const [copyStatus, setCopyStatus] = useState<string>("");
+
+  useEffect(() => {
+    const sections = navLinks.map((link) =>
+      document.querySelector(link.href)
+    );
+
+    const handleScroll = () => {
+      const offset = 140;
+      const positions = sections
+        .map((section) => {
+          if (!section) return null;
+          const rect = section.getBoundingClientRect();
+          return { id: section.id, top: rect.top - offset };
+        })
+        .filter(Boolean) as { id: string; top: number }[];
+
+      const current =
+        positions
+          .filter((pos) => pos.top <= 0)
+          .sort((a, b) => b.top - a.top)[0] || positions[0];
+
+      if (current && current.id !== activeSection) {
+        setActiveSection(current.id);
+      }
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [activeSection]);
+
+  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const name = String(formData.get("name") || "").trim();
+    const email = String(formData.get("email") || "").trim();
+    const message = String(formData.get("message") || "").trim();
+
+    const subject = name ? `Project inquiry from ${name}` : "Project inquiry";
+    const bodyLines = [
+      name && `Name: ${name}`,
+      email && `Email: ${email}`,
+      "",
+      message
+    ].filter(Boolean);
+    const mailto = `mailto:${profile.links.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
+    window.location.href = mailto;
+  };
+
+  const openEmailClient = () => {
+    window.location.href = `mailto:${profile.links.email}`;
+  };
+
+  const handleCopyEmail = async () => {
+    try {
+      await navigator.clipboard.writeText(profile.links.email);
+      setCopyStatus("Copied!");
+      window.setTimeout(() => setCopyStatus(""), 2000);
+    } catch {
+      setCopyStatus("Copy failed");
+      window.setTimeout(() => setCopyStatus(""), 2000);
+    }
+  };
 
   return (
     <div className="app">
@@ -31,7 +102,14 @@ function App() {
           </a>
           <nav className="nav" aria-label="Primary">
             {navLinks.map((link) => (
-              <a key={link.href} href={link.href}>
+              <a
+                key={link.href}
+                href={link.href}
+                className={activeSection === link.href.slice(1) ? "active" : ""}
+                aria-current={
+                  activeSection === link.href.slice(1) ? "page" : undefined
+                }
+              >
                 {link.label}
               </a>
             ))}
@@ -50,7 +128,7 @@ function App() {
         </div>
       </header>
 
-      <main id="main">
+      <main id="main" role="main">
         <section id="about" className="section hero" aria-labelledby="hero-title">
           <div className="container hero-grid">
             <div className="hero-content">
@@ -104,7 +182,7 @@ function App() {
                 </div>
               </div>
               <div className="hero-links">
-                <a href={`mailto:${profile.links.email}`}>{profile.links.email}</a>
+                <span className="contact-link">{profile.links.email}</span>
                 <a href={`tel:${profile.links.phone}`}>{profile.links.phone}</a>
                 <span>Skype: {profile.links.skype}</span>
               </div>
@@ -256,9 +334,17 @@ function App() {
               </p>
             </div>
             <div className="contact-card">
-              <a className="contact-link" href={`mailto:${profile.links.email}`}>
-                {profile.links.email}
-              </a>
+              <div className="contact-inline">
+                <span className="contact-link">{profile.links.email}</span>
+                <button
+                  className="contact-copy"
+                  type="button"
+                  onClick={handleCopyEmail}
+                  aria-live="polite"
+                >
+                  {copyStatus || "Copy email"}
+                </button>
+              </div>
               <a className="contact-link" href={`tel:${profile.links.phone}`}>
                 {profile.links.phone}
               </a>
@@ -267,9 +353,9 @@ function App() {
                 <span>Skype: {profile.links.skype}</span>
               </div>
               <div className="contact-actions">
-                <a className="btn primary" href={`mailto:${profile.links.email}`}>
+                <button className="btn primary" type="button" onClick={openEmailClient}>
                   Email
-                </a>
+                </button>
                 <a
                   className="btn"
                   href={profile.links.linkedin}
@@ -280,12 +366,7 @@ function App() {
                 </a>
               </div>
             </div>
-            <form
-              className="contact-form"
-              action={`mailto:${profile.links.email}`}
-              method="post"
-              encType="text/plain"
-            >
+            <form className="contact-form" onSubmit={handleContactSubmit}>
               <div className="form-row">
                 <label htmlFor="contact-name">Name</label>
                 <input
@@ -317,8 +398,8 @@ function App() {
                 />
               </div>
               <p className="form-note">
-                The form opens your default email client. If it does not, email me
-                directly at {profile.links.email}.
+                Submitting opens your default email client with a pre-filled
+                message.
               </p>
               <button className="btn primary" type="submit">
                 Send Message
@@ -338,7 +419,9 @@ function App() {
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <a href={`mailto:${profile.links.email}`}>Email</a>
+            <button className="footer-link" type="button" onClick={openEmailClient}>
+              Email
+            </button>
           </div>
         </div>
       </footer>
