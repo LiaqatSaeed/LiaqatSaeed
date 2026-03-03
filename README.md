@@ -3,6 +3,8 @@
 ![Location](https://img.shields.io/badge/Location-Islamabad%2C%20Pakistan-2563eb)
 ![Open to Work](https://img.shields.io/badge/Open%20to%20Work-Yes-16a34a)
 ![Tech Stack](https://img.shields.io/badge/Tech%20Stack-TypeScript%20%7C%20React%20%7C%20Node.js-1f2933)
+![Automation](https://img.shields.io/badge/Automation-n8n%20%7C%20Workflows-0f766e)
+![AI](https://img.shields.io/badge/AI-Product%20%7C%20Integrations-7c3aed)
 
 Senior full-stack engineer with 9+ years building scalable web and mobile products. I specialize in TypeScript, React, React Native, and Node.js, with deep experience in integrations, automation (n8n), and production deployments. Based in Islamabad, Pakistan, and working remotely with global teams.
 
