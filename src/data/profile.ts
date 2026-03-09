@@ -143,14 +143,16 @@ export const profile: Profile = {
     {
       company: "Mercans",
       location: "Estonia (Remote)",
-      title: "Fullstack Integration Engineer",
+      title: "Full-Stack Automation Engineer",
       dates: "Mar 2024 – Present",
       employmentType: "Full Time",
       highlights: [
-        "Automated Workday PECI file processing using n8n workflows with GPG decryption, XML-to-JSON conversion, and shell scripting.",
-        "Built statutory integration workflows for Ireland, Finland, and Norway to support compliant reporting and data synchronization.",
-        "Delivered country-specific integration templates for global payroll deployments using Kotlin, PHP Phalcon, PostgreSQL, microservices, Docker, MongoDB, and JavaScript.",
-        "Implemented Singapore leave formulas (caregiver, annual, childcare, sick leave) within a custom formula engine and payroll rules framework."
+        "Worked as a Full-Stack Integration Engineer focusing on automation workflows, API integrations, and backend systems supporting global payroll and HR platforms.",
+        "Designed and implemented automated Workday PECI file processing pipelines using n8n workflows, including GPG decryption, XML-to-JSON transformations, and shell scripting automation.",
+        "Built country-specific integration workflows for Ireland, Finland, and Norway to support compliant payroll reporting and automated data synchronization.",
+        "Developed scalable integration services and templates for global payroll deployments using microservices architecture with Node.js, PostgreSQL, MongoDB, and Docker.",
+        "Automated data processing pipelines and backend workflows to reduce manual operations and improve reliability of payroll and HR integrations.",
+        "Implemented complex payroll rule engines and statutory leave formulas (caregiver, annual, childcare, sick leave) for Singapore within a custom payroll automation framework."
       ]
     },
     {
