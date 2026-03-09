@@ -31,10 +31,19 @@ export type EducationItem = {
   details?: string[];
 };
 
+export type CertificateItem = {
+  title: string;
+  issuer: string;
+  issued?: string;
+  id: string;
+  url: string;
+};
+
 export type Profile = {
   name: string;
   headline: string;
   title: string;
+  tagline: string;
   summary: string;
   location: string;
   links: {
@@ -50,14 +59,17 @@ export type Profile = {
   experience: ExperienceItem[];
   projects: ProjectItem[];
   education: EducationItem[];
+  certificates: CertificateItem[];
 };
 
 export const profile: Profile = {
   name: "Liaqat Saeed",
-  headline: "Senior Full-Stack Engineer (TypeScript, React, Node)",
-  title: "Software Engineer / Senior Full Stack Engineer",
+  headline: "Full-Stack Automation Engineer (n8n, API Integrations, Node.js)",
+  title: "Full-Stack Automation Engineer",
+  tagline:
+    "Helping businesses automate workflows and connect systems using n8n, APIs, and custom backend services.",
   summary:
-    "Full Stack Software Engineer with 9 years of experience building scalable web and mobile applications using TypeScript, React, React Native, Node.js, Express, and modern databases. Specialized in integrations, n8n automation, shell scripting, and production deployments.",
+    "Senior engineer with 9+ years of experience building automation workflows, API integrations, and backend systems for global teams. I design reliable data pipelines, connect business platforms, and ship backend services with Node.js, TypeScript, Python, and Docker to eliminate manual work and improve operational scale.",
   location: "Islamabad, Pakistan",
   links: {
     email: "liaqatsaeed007@gmail.com",
@@ -68,28 +80,30 @@ export const profile: Profile = {
     skype: "liaquat.saeed"
   },
   valueProps: [
-    "Scalable web and mobile builds with TypeScript, React, and Node.js",
-    "Integration-heavy systems, automation workflows, and API design",
-    "Reliable deployments with Docker, Nginx, and cloud infrastructure"
+    "Workflow automation and API integration systems that reduce manual operations",
+    "Backend services and data pipelines built for reliability and scale",
+    "Production-ready deployments with Docker, Nginx, and cloud infrastructure"
   ],
   skills: [
     {
-      title: "Frontend",
+      title: "Automation & Integrations",
       items: [
-        "TypeScript",
-        "React",
-        "JavaScript",
-        "React Native",
-        "HTML",
-        "CSS",
-        "Sass",
-        "jQuery",
-        "Vue (Beginner)"
+        "n8n",
+        "API Integrations",
+        "Workflow Automation",
+        "REST APIs",
+        "GraphQL",
+        "Webhooks",
+        "Shell scripting",
+        "Bash"
       ]
     },
     {
-      title: "Backend",
+      title: "Backend & Services",
       items: [
+        "TypeScript",
+        "JavaScript",
+        "Python",
         "Node.js",
         "Express",
         "ASP.NET MVC",
@@ -98,25 +112,8 @@ export const profile: Profile = {
       ]
     },
     {
-      title: "Mobile",
-      items: ["React Native", "Capacitor"]
-    },
-    {
       title: "Databases",
       items: ["MongoDB", "PostgreSQL", "MySQL", "SQL", "SQLite"]
-    },
-    {
-      title: "Automation & Integrations",
-      items: [
-        "n8n",
-        "Shell scripting",
-        "REST APIs",
-        "GraphQL",
-        "Phrase.com",
-        "Shopify Admin API",
-        "Polaris SEP-24",
-        "EasyBit API"
-      ]
     },
     {
       title: "DevOps & Infra",
@@ -127,8 +124,27 @@ export const profile: Profile = {
         "IIS",
         "Apache",
         "SSL",
-        "DNS (GoDaddy, Wix, Namecheap)"
+        "DNS (GoDaddy, Wix, Namecheap)",
+        "CI/CD"
       ]
+    },
+    {
+      title: "Frontend",
+      items: [
+        "React",
+        "TypeScript",
+        "JavaScript",
+        "React Native",
+        "HTML",
+        "CSS",
+        "Sass",
+        "jQuery",
+        "Vue (Beginner)"
+      ]
+    },
+    {
+      title: "Mobile",
+      items: ["React Native", "Capacitor"]
     },
     {
       title: "Testing",
@@ -143,14 +159,16 @@ export const profile: Profile = {
     {
       company: "Mercans",
       location: "Estonia (Remote)",
-      title: "Fullstack Integration Engineer",
+      title: "Automation & Integration Engineer",
       dates: "Mar 2024 – Present",
       employmentType: "Full Time",
       highlights: [
-        "Automated Workday PECI file processing using n8n workflows with GPG decryption, XML-to-JSON conversion, and shell scripting.",
-        "Built statutory integration workflows for Ireland, Finland, and Norway to support compliant reporting and data synchronization.",
-        "Delivered country-specific integration templates for global payroll deployments using Kotlin, PHP Phalcon, PostgreSQL, microservices, Docker, MongoDB, and JavaScript.",
-        "Implemented Singapore leave formulas (caregiver, annual, childcare, sick leave) within a custom formula engine and payroll rules framework."
+        "Led automation workflows, API integrations, and backend systems for global payroll and HR platforms.",
+        "Designed automated Workday PECI pipelines with n8n, GPG decryption, XML-to-JSON transformations, and shell scripting.",
+        "Built country-specific integration workflows for Ireland, Finland, and Norway to support compliant payroll reporting and data synchronization.",
+        "Developed scalable integration services and templates using microservices with Node.js, PostgreSQL, MongoDB, and Docker.",
+        "Automated data processing pipelines to reduce manual operations and improve integration reliability.",
+        "Implemented complex payroll rule engines and statutory leave formulas (caregiver, annual, childcare, sick leave) for Singapore."
       ]
     },
     {
@@ -160,12 +178,12 @@ export const profile: Profile = {
       dates: "Jun 2023 – Present",
       employmentType: "Freelance / Part Time",
       highlights: [
-        "Delivered DirectRent features and fixes including map/email flows and a new admin module (Node, React, API integration).",
-        "Built a real-time Rasa chatbot UI with Socket.io using React, Tailwind, TypeScript, MobX, vanilla-extract, and REST APIs.",
-        "Deployed the Stellar Disbursement Platform on Linux with Docker, Nginx reverse proxy, and SSL hardening.",
-        "Shipped ATM Token Wallet and Freedom Pay Wallet to the App Store using Capacitor + Next.js with Stellar API integration.",
-        "Built the SDP Quotes Module using SQLite, Python, Django, Next.js, and Tailwind CSS.",
-        "Implemented the Instant Crypto Exchange (ICE), integrating EasyBit API and Polaris SEP-24 for secure crypto transactions."
+        "Delivered integration-heavy features and backend automation for DirectRent, including map/email flows and admin workflows.",
+        "Built a real-time Rasa chatbot UI connected to REST APIs and Socket.io services.",
+        "Deployed the Stellar Disbursement Platform with Docker, Nginx reverse proxy, and SSL hardening.",
+        "Shipped automation-enabled wallet apps using Capacitor + Next.js with Stellar API integrations.",
+        "Built the SDP Quotes Module with Python, Django, SQLite, and workflow-driven data processing.",
+        "Implemented the Instant Crypto Exchange (ICE), integrating EasyBit API and Polaris SEP-24 for secure transactions."
       ]
     },
     {
@@ -175,10 +193,10 @@ export const profile: Profile = {
       dates: "Jan 2022 – Jun 2023",
       employmentType: "Full Time",
       highlights: [
-        "Built the i18n-js CLI to sync Phrase.com translation files into repositories (TypeScript, Node, Jest, React Testing Library).",
-        "Developed the WordPress Gutenberg block plugin for Lottie animations (React, TypeScript, Tailwind, GraphQL, PHP, MySQL).",
-        "Added features and bug fixes to the Microsoft M365 add-in (React, TypeScript, GraphQL, urql, Apollo).",
-        "Built the Bubble.io plugin to embed Lottie animations for no-code users.",
+        "Built the i18n-js CLI to automate Phrase.com translation sync across repos (TypeScript, Node, Jest).",
+        "Developed WordPress and Shopify plugins with API integrations and reliable content workflows.",
+        "Shipped Microsoft M365 add-in enhancements using GraphQL and integration-focused frontend logic.",
+        "Built the Bubble.io plugin to embed Lottie animations for no-code builders.",
         "Developed the Shopify block extension with Shopify Admin API integration and Polaris UI patterns."
       ]
     },
@@ -189,8 +207,8 @@ export const profile: Profile = {
       dates: "Oct 2021 – Oct 2022",
       employmentType: "Contract",
       highlights: [
-        "Delivered alert management module features for Onyx Insight AIHUB using React, TypeScript, and API integrations.",
-        "Shipped features and fixes for Retain Cloud using React, Jest, Redux, and API integrations."
+        "Delivered alert management features for Onyx Insight AIHUB using React, TypeScript, and API integrations.",
+        "Shipped features and fixes for Retain Cloud with React, Jest, Redux, and integration-driven workflows."
       ]
     },
     {
@@ -200,9 +218,9 @@ export const profile: Profile = {
       dates: "Jan 2020 – Jan 2022",
       employmentType: "Freelance / Part Time",
       highlights: [
-        "Built Forex174, a forex analysis and forecasting tool (React, Node, MongoDB, AWS).",
-        "Delivered DirectRent, a property renting platform with web and admin experiences.",
-        "Designed and integrated the Niazi Foods ecommerce mobile app (React Native, Redux, REST APIs).",
+        "Built Forex174, a forex analysis platform with Node.js services, MongoDB, and AWS.",
+        "Delivered DirectRent with web/admin workflows and integration-ready backend services.",
+        "Designed and integrated the Niazi Foods ecommerce app with REST APIs.",
         "Built CapriEasy travel and booking workflows with payments and Firebase.",
         "Launched Labbin Dance and KickIt mobile apps with React Native and API integrations."
       ]
@@ -379,6 +397,35 @@ export const profile: Profile = {
       details: [
         "Coursework included data mining, HCI, database management, and web engineering projects."
       ]
+    }
+  ],
+  certificates: [
+    {
+      title: "REST API (Intermediate)",
+      issuer: "HackerRank",
+      id: "FAD63792F4BC",
+      url: "https://www.hackerrank.com/certificates/fad63792f4bc"
+    },
+    {
+      title: "JavaScript (Intermediate)",
+      issuer: "HackerRank",
+      issued: "Aug 20, 2021",
+      id: "B7A6C5554BF0",
+      url: "https://www.hackerrank.com/certificates/b7a6c5554bf0"
+    },
+    {
+      title: "React (Basic)",
+      issuer: "HackerRank",
+      issued: "Sep 7, 2021",
+      id: "9631A784EDF8",
+      url: "https://www.hackerrank.com/certificates/9631a784edf8"
+    },
+    {
+      title: "CSS (Basic)",
+      issuer: "HackerRank",
+      issued: "Aug 20, 2021",
+      id: "524BF7731CF3",
+      url: "https://www.hackerrank.com/certificates/524bf7731cf3"
     }
   ]
 };

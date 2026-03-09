@@ -35,6 +35,17 @@ Senior full-stack engineer with 9+ years building scalable web and mobile produc
 - LottieFiles plugins for WordPress, Shopify, Microsoft M365, and Bubble.io
 - DirectRent.ai, Forex174, Calimatic, Sketchfunnels, TravelGny
 
+## Certifications
+
+- REST API (Intermediate) — HackerRank  
+  https://www.hackerrank.com/certificates/fad63792f4bc
+- JavaScript (Intermediate) — HackerRank (Aug 20, 2021)  
+  https://www.hackerrank.com/certificates/b7a6c5554bf0
+- React (Basic) — HackerRank (Sep 7, 2021)  
+  https://www.hackerrank.com/certificates/9631a784edf8
+- CSS (Basic) — HackerRank (Aug 20, 2021)  
+  https://www.hackerrank.com/certificates/524bf7731cf3
+
 ## Contact
 
 - Portfolio: https://liaqatsaeed6777.com/
