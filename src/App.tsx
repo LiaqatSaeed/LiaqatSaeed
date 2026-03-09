@@ -14,7 +14,6 @@ const navLinks = [
 function App() {
   const { theme, toggleTheme } = useTheme();
   const [activeSection, setActiveSection] = useState<string>("about");
-  const [copyStatus, setCopyStatus] = useState<string>("");
 
   useEffect(() => {
     const sections = navLinks.map((link) =>
@@ -50,40 +49,6 @@ function App() {
     };
   }, [activeSection]);
 
-  const handleContactSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const name = String(formData.get("name") || "").trim();
-    const email = String(formData.get("email") || "").trim();
-    const message = String(formData.get("message") || "").trim();
-
-    const subject = name ? `Project inquiry from ${name}` : "Project inquiry";
-    const bodyLines = [
-      name && `Name: ${name}`,
-      email && `Email: ${email}`,
-      "",
-      message
-    ].filter(Boolean);
-    const mailto = `mailto:${profile.links.email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join("\n"))}`;
-    window.location.href = mailto;
-  };
-
-  const openEmailClient = () => {
-    window.location.href = `mailto:${profile.links.email}`;
-  };
-
-  const handleCopyEmail = async () => {
-    try {
-      await navigator.clipboard.writeText(profile.links.email);
-      setCopyStatus("Copied!");
-      window.setTimeout(() => setCopyStatus(""), 2000);
-    } catch {
-      setCopyStatus("Copy failed");
-      window.setTimeout(() => setCopyStatus(""), 2000);
-    }
-  };
-
   return (
     <div className="app">
       <a className="skip-link" href="#main">
@@ -114,19 +79,43 @@ function App() {
               </a>
             ))}
           </nav>
-          <div className="header-actions">
-            <button
-              className="theme-toggle"
-              onClick={toggleTheme}
-              aria-pressed={theme === "dark"}
-              aria-label="Toggle dark mode"
-              type="button"
-            >
-              {theme === "dark" ? "Light mode" : "Dark mode"}
-            </button>
-          </div>
         </div>
       </header>
+
+      <button
+        className="theme-fab"
+        onClick={toggleTheme}
+        aria-pressed={theme === "dark"}
+        aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+        type="button"
+        title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+      >
+        {theme === "dark" ? (
+          <svg
+            className="theme-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M12 4.5a1 1 0 0 1 1-1h0a1 1 0 0 1 1 1V6a1 1 0 0 1-2 0V4.5Zm0 13a1 1 0 0 1 1 1V20a1 1 0 0 1-2 0v-1.5a1 1 0 0 1 1-1Zm7.5-5.5a1 1 0 0 1 1-1H22a1 1 0 1 1 0 2h-1.5a1 1 0 0 1-1-1Zm-17 0a1 1 0 0 1 1-1H5a1 1 0 1 1 0 2H3.5a1 1 0 0 1-1-1Zm13.02-5.52a1 1 0 0 1 1.42 0l.06.06a1 1 0 1 1-1.42 1.42l-.06-.06a1 1 0 0 1 0-1.42Zm-10.1 10.1a1 1 0 0 1 1.42 0l.06.06a1 1 0 1 1-1.42 1.42l-.06-.06a1 1 0 0 1 0-1.42Zm10.16 1.48a1 1 0 0 1 0-1.42l.06-.06a1 1 0 1 1 1.42 1.42l-.06.06a1 1 0 0 1-1.42 0Zm-10.1-10.1a1 1 0 0 1 0-1.42l.06-.06a1 1 0 1 1 1.42 1.42l-.06.06a1 1 0 0 1-1.42 0ZM12 8a4 4 0 1 1 0 8 4 4 0 0 1 0-8Z"
+              fill="currentColor"
+            />
+          </svg>
+        ) : (
+          <svg
+            className="theme-icon"
+            viewBox="0 0 24 24"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path
+              d="M20.5 15.6A8.5 8.5 0 0 1 8.4 3.5a1 1 0 0 1 1.2 1.2 6.5 6.5 0 1 0 9.7 9.7 1 1 0 0 1 1.2 1.2Z"
+              fill="currentColor"
+            />
+          </svg>
+        )}
+      </button>
 
       <main id="main" role="main">
         <section id="about" className="section hero" aria-labelledby="hero-title">
@@ -135,12 +124,13 @@ function App() {
               <p className="eyebrow">{profile.title}</p>
               <h1 id="hero-title">{profile.headline}</h1>
               <p className="lead">{profile.summary}</p>
+              <p className="tagline">{profile.tagline}</p>
               <div className="cta-row">
                 <a className="btn primary" href={profile.links.resume} download>
-                  Download Resume (PDF)
+                  Download Resume
                 </a>
                 <a className="btn" href="#contact">
-                  Contact
+                  Discuss Your Automation Project
                 </a>
                 <a
                   className="btn ghost"
@@ -178,13 +168,17 @@ function App() {
                 </div>
                 <div>
                   <p className="meta-label">Focus</p>
-                  <p className="meta-value">Integrations, automation, deployments</p>
+                  <ul className="meta-list">
+                    <li>Workflow Automation</li>
+                    <li>API Integrations</li>
+                    <li>Backend Systems</li>
+                    <li>Deployments</li>
+                  </ul>
                 </div>
               </div>
               <div className="hero-links">
-                <span className="contact-link">{profile.links.email}</span>
-                <a href={`tel:${profile.links.phone}`}>{profile.links.phone}</a>
-                <span>Skype: {profile.links.skype}</span>
+                <span>Available for remote automation projects</span>
+                <span>Open to integration and workflow engagements</span>
               </div>
             </div>
           </div>
@@ -195,8 +189,8 @@ function App() {
             <div className="section-heading">
               <h2 id="skills-title">Skills</h2>
               <p>
-                Core technologies and platforms across frontend, backend, mobile,
-                automation, and infrastructure.
+                Automation, integration, backend, and infrastructure capabilities
+                that power reliable workflow systems.
               </p>
             </div>
             <div className="skills-grid">
@@ -215,6 +209,43 @@ function App() {
         </section>
 
         <section
+          id="certifications"
+          className="section"
+          aria-labelledby="certifications-title"
+        >
+          <div className="container">
+            <div className="section-heading">
+              <h2 id="certifications-title">Certifications</h2>
+              <p>
+                Verified certifications that support automation and integration
+                delivery.
+              </p>
+            </div>
+            <div className="cert-grid">
+              {profile.certificates.map((cert) => (
+                <article className="cert-card" key={cert.id}>
+                  <div>
+                    <h3>{cert.title}</h3>
+                    <p className="cert-meta">{cert.issuer}</p>
+                    <p className="cert-meta">
+                      {cert.issued ? `Issued: ${cert.issued} · ` : ""}ID: {cert.id}
+                    </p>
+                  </div>
+                  <a
+                    className="cert-link"
+                    href={cert.url}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    View Certificate
+                  </a>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section
           id="experience"
           className="section"
           aria-labelledby="experience-title"
@@ -223,8 +254,8 @@ function App() {
             <div className="section-heading">
               <h2 id="experience-title">Experience</h2>
               <p>
-                Senior full-stack and integration roles focused on delivering
-                reliable products, workflows, and deployments.
+                Automation, integration, and backend engineering roles focused on
+                reliable workflows, data pipelines, and production deployments.
               </p>
             </div>
             <div className="timeline">
@@ -258,7 +289,7 @@ function App() {
             <div className="section-heading">
               <h2 id="projects-title">Selected Projects</h2>
               <p>
-                Recent integrations, platforms, and product deliveries aligned
+                Automation systems, integrations, and product deliveries aligned
                 with the resume.
               </p>
             </div>
@@ -329,82 +360,35 @@ function App() {
             <div>
               <h2 id="contact-title">Contact</h2>
               <p>
-                Reach out for collaboration, integration work, or senior full-stack
-                engineering support.
+                Share your automation or integration needs and I will help you
+                design a reliable workflow solution.
               </p>
             </div>
             <div className="contact-card">
-              <div className="contact-inline">
-                <span className="contact-link">{profile.links.email}</span>
-                <button
-                  className="contact-copy"
-                  type="button"
-                  onClick={handleCopyEmail}
-                  aria-live="polite"
-                >
-                  {copyStatus || "Copy email"}
-                </button>
-              </div>
-              <a className="contact-link" href={`tel:${profile.links.phone}`}>
-                {profile.links.phone}
-              </a>
               <div className="contact-meta">
-                <span>{profile.location}</span>
-                <span>Skype: {profile.links.skype}</span>
+                <span>Remote-first, async-friendly collaboration</span>
+                <span>Specialized in automation, integrations, and backend systems</span>
               </div>
               <div className="contact-actions">
-                <button className="btn primary" type="button" onClick={openEmailClient}>
-                  Email
-                </button>
-                <a
-                  className="btn"
-                  href={profile.links.linkedin}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  LinkedIn
+                <a className="btn primary" href="#experience">
+                  View Automation Experience
+                </a>
+                <a className="btn" href={profile.links.linkedin} target="_blank" rel="noreferrer">
+                  Connect on LinkedIn
                 </a>
               </div>
             </div>
-            <form className="contact-form" onSubmit={handleContactSubmit}>
-              <div className="form-row">
-                <label htmlFor="contact-name">Name</label>
-                <input
-                  id="contact-name"
-                  name="name"
-                  type="text"
-                  placeholder="Your name"
-                  required
-                />
-              </div>
-              <div className="form-row">
-                <label htmlFor="contact-email">Email</label>
-                <input
-                  id="contact-email"
-                  name="email"
-                  type="email"
-                  placeholder="you@email.com"
-                  required
-                />
-              </div>
-              <div className="form-row">
-                <label htmlFor="contact-message">Message</label>
-                <textarea
-                  id="contact-message"
-                  name="message"
-                  placeholder="Tell me about your project or role."
-                  rows={4}
-                  required
-                />
-              </div>
+            <div className="contact-form">
+              <h3 className="contact-title">What I Can Help With</h3>
+              <ul>
+                <li>n8n workflow automation and integrations</li>
+                <li>API orchestration and backend services</li>
+                <li>Data pipelines, reliability, and deployment hardening</li>
+              </ul>
               <p className="form-note">
-                Submitting opens your default email client with a pre-filled
-                message.
+                Prefer platform messaging for initial conversations.
               </p>
-              <button className="btn primary" type="submit">
-                Send Message
-              </button>
-            </form>
+            </div>
           </div>
         </section>
       </main>
@@ -419,9 +403,6 @@ function App() {
             <a href={profile.links.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
-            <button className="footer-link" type="button" onClick={openEmailClient}>
-              Email
-            </button>
           </div>
         </div>
       </footer>
