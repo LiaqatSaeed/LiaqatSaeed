@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://liaqatsaeed6777.com/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
+  <url><loc>https://liaqatsaeed6777.com/</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/about</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/projects</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/services</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/resume</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/contact</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/hire-react-developer</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/hire-full-stack-developer</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/automation-engineer</loc></url>
+  <url><loc>https://liaqatsaeed6777.com/remote-software-engineer</loc></url>
 </urlset>

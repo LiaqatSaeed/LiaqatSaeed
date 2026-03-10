@@ -37,6 +37,19 @@ export type CertificateItem = {
   issued?: string;
   id: string;
   url: string;
+  iframeUrl?: string;
+  imageUrl?: string;
+};
+
+export type CaseStudy = {
+  name: string;
+  domain: string;
+  role: string;
+  stack: string[];
+  problem: string;
+  solution: string;
+  features: string[];
+  impact: string[];
 };
 
 export type Profile = {
@@ -60,6 +73,7 @@ export type Profile = {
   projects: ProjectItem[];
   education: EducationItem[];
   certificates: CertificateItem[];
+  caseStudies: CaseStudy[];
 };
 
 export const profile: Profile = {
@@ -404,28 +418,119 @@ export const profile: Profile = {
       title: "REST API (Intermediate)",
       issuer: "HackerRank",
       id: "FAD63792F4BC",
-      url: "https://www.hackerrank.com/certificates/fad63792f4bc"
+      url: "https://www.hackerrank.com/certificates/fad63792f4bc",
+      iframeUrl: "https://www.hackerrank.com/certificates/iframe/fad63792f4bc",
+      imageUrl: "/certificates/rest-api-intermediate.png"
     },
     {
       title: "JavaScript (Intermediate)",
       issuer: "HackerRank",
       issued: "Aug 20, 2021",
       id: "B7A6C5554BF0",
-      url: "https://www.hackerrank.com/certificates/b7a6c5554bf0"
+      url: "https://www.hackerrank.com/certificates/b7a6c5554bf0",
+      iframeUrl: "https://www.hackerrank.com/certificates/iframe/b7a6c5554bf0",
+      imageUrl: "/certificates/javascript-intermediate.png"
     },
     {
       title: "React (Basic)",
       issuer: "HackerRank",
       issued: "Sep 7, 2021",
       id: "9631A784EDF8",
-      url: "https://www.hackerrank.com/certificates/9631a784edf8"
+      url: "https://www.hackerrank.com/certificates/9631a784edf8",
+      iframeUrl: "https://www.hackerrank.com/certificates/iframe/9631a784edf8",
+      imageUrl: "/certificates/react_basic.png"
     },
     {
       title: "CSS (Basic)",
       issuer: "HackerRank",
       issued: "Aug 20, 2021",
       id: "524BF7731CF3",
-      url: "https://www.hackerrank.com/certificates/524bf7731cf3"
+      url: "https://www.hackerrank.com/certificates/524bf7731cf3",
+      iframeUrl: "https://www.hackerrank.com/certificates/iframe/524bf7731cf3",
+      imageUrl: "/certificates/css-basic.png"
+    }
+  ]
+  ,
+  caseStudies: [
+    {
+      name: "Stellar Disbursement Platform",
+      domain: "Fintech · Disbursements",
+      role: "Full-Stack Automation Engineer",
+      stack: ["Node.js", "Python", "Django", "Next.js", "Docker", "Nginx"],
+      problem:
+        "Manual payout workflows and slow reconciliation across multiple financial systems.",
+      solution:
+        "Automated disbursement pipelines with secure integrations, reliable data processing, and admin dashboards.",
+      features: [
+        "Automated payout workflows and validation rules",
+        "Integration with Stellar APIs and compliance checks",
+        "Admin dashboards for monitoring and approvals"
+      ],
+      impact: [
+        "Reduced manual processing time and errors",
+        "Improved payout visibility for operations teams",
+        "Faster turnaround for partner settlements"
+      ]
+    },
+    {
+      name: "Workday PECI Automation",
+      domain: "HR/Payroll Integrations",
+      role: "Automation & Integration Engineer",
+      stack: ["n8n", "Node.js", "Shell", "PostgreSQL", "Docker"],
+      problem:
+        "PECI file processing required manual decryption, transformations, and uploads.",
+      solution:
+        "Built automated n8n workflows with GPG decryption, XML-to-JSON transforms, and secure delivery.",
+      features: [
+        "GPG decryption and validation",
+        "XML-to-JSON transformations",
+        "Audit logs and failure recovery"
+      ],
+      impact: [
+        "Eliminated manual file handling",
+        "Improved processing reliability and traceability",
+        "Accelerated HR/payroll data availability"
+      ]
+    },
+    {
+      name: "Instant Crypto Exchange (ICE)",
+      domain: "Crypto · Payments",
+      role: "Backend & Integration Engineer",
+      stack: ["Python", "Django", "EasyBit API", "Polaris SEP-24"],
+      problem:
+        "Needed compliant crypto exchange flows with automated settlement and verification.",
+      solution:
+        "Integrated EasyBit and SEP-24 APIs with secure backend workflows and monitoring.",
+      features: [
+        "Automated exchange flows and callbacks",
+        "Compliance-aware transaction handling",
+        "Operational monitoring and alerts"
+      ],
+      impact: [
+        "Enabled secure, compliant crypto transactions",
+        "Reduced support overhead through automation",
+        "Improved partner trust and reliability"
+      ]
+    },
+    {
+      name: "Rasa Chatbot Platform",
+      domain: "AI Support · Automation",
+      role: "Full-Stack Engineer",
+      stack: ["React", "TypeScript", "Socket.io", "REST APIs"],
+      problem:
+        "Customer support workflows needed real-time automation and chat orchestration.",
+      solution:
+        "Built a real-time UI with API integrations to orchestrate automated responses.",
+      features: [
+        "Live chat UI with Socket.io",
+        "API-driven bot management",
+        "Workflow routing for human handoff"
+      ],
+      impact: [
+        "Improved response speed for support teams",
+        "Reduced manual triage effort",
+        "Scaled support without extra headcount"
+      ]
     }
   ]
 };
