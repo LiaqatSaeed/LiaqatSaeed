@@ -1,12 +1,15 @@
 import { profile } from "../data/profile";
 import { siteConfig } from "../data/site";
 import { useSeo } from "../seo";
+import { formatExperienceYears } from "../utils/experience";
 
 export default function Resume() {
+  const experienceLabel = formatExperienceYears();
+
   useSeo({
     title: "Resume | Liaqat Saeed – Full-Stack Automation Engineer",
     description:
-      "Download the resume of Liaqat Saeed, senior full-stack automation engineer specializing in n8n workflows, API integrations, Node.js, and TypeScript.",
+      `Download the resume of Liaqat Saeed, a full-stack automation engineer with ${experienceLabel} of experience specializing in n8n workflows, API integrations, Node.js, and TypeScript.`,
     canonical: `${siteConfig.url}/resume`,
     ogImage: siteConfig.ogImage,
     jsonLd: {
@@ -31,7 +34,9 @@ export default function Resume() {
           <div className="resume-card">
             <div>
               <h2>Full-Stack Automation Engineer</h2>
-              <p>{profile.summary}</p>
+              <p>
+                {experienceLabel} of experience. {profile.summary}
+              </p>
               <ul>
                 <li>Automation workflows and API integrations</li>
                 <li>Node.js, TypeScript, Python backends</li>

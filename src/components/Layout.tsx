@@ -96,8 +96,11 @@ export default function Layout() {
           <div className="footer-links">
             <NavLink to="/hire-full-stack-developer">Hire Full-Stack</NavLink>
             <NavLink to="/hire-react-developer">Hire React</NavLink>
+            <NavLink to="/hire-n8n-developer">Hire n8n</NavLink>
+            <NavLink to="/api-integration-services">API Integrations</NavLink>
             <NavLink to="/automation-engineer">Automation</NavLink>
             <NavLink to="/remote-software-engineer">Remote Engineer</NavLink>
+            <NavLink to="/faq">FAQ</NavLink>
           </div>
         </div>
       </footer>

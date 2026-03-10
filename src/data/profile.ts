@@ -83,7 +83,7 @@ export const profile: Profile = {
   tagline:
     "Helping businesses automate workflows and connect systems using n8n, APIs, and custom backend services.",
   summary:
-    "Senior engineer with 9+ years of experience building automation workflows, API integrations, and backend systems for global teams. I design reliable data pipelines, connect business platforms, and ship backend services with Node.js, TypeScript, Python, and Docker to eliminate manual work and improve operational scale.",
+    "Senior engineer building automation workflows, API integrations, and backend systems for global teams. I design reliable data pipelines, connect business platforms, and ship backend services with Node.js, TypeScript, Python, and Docker to eliminate manual work and improve operational scale.",
   location: "Islamabad, Pakistan",
   links: {
     email: "liaqatsaeed007@gmail.com",
