@@ -1,6 +1,5 @@
 import FaqList from "../components/FaqList";
 import { landingFaqs } from "../data/aeo";
-import { profile } from "../data/profile";
 import { siteConfig } from "../data/site";
 import { useSeo } from "../seo";
 
