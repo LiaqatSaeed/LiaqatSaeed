@@ -1,12 +1,18 @@
+import FaqList from "../components/FaqList";
+import { buildWhyHirePoints, homeCaseStudies, homeFaqs, homeServices } from "../data/aeo";
 import { profile } from "../data/profile";
 import { siteConfig } from "../data/site";
 import { useSeo } from "../seo";
+import { formatExperienceYears } from "../utils/experience";
 
 export default function Home() {
+  const experienceLabel = formatExperienceYears();
+  const whyHirePoints = buildWhyHirePoints(experienceLabel);
+
   useSeo({
-    title: "Liaqat Saeed | Full-Stack Automation Engineer (n8n, API Integrations)",
+    title: "Liaqat Saeed | Full-Stack Automation Engineer, n8n & API Integrations",
     description:
-      "Senior full-stack automation engineer with 9+ years building n8n workflows, API integrations, Node.js backends, and SaaS dashboards. Open to remote roles and freelance projects.",
+      `Liaqat Saeed is a Full-Stack Automation Engineer with ${experienceLabel} of experience building n8n workflows, API integrations, internal tools, React apps, Node.js backends, and production-ready systems.`,
     canonical: `${siteConfig.url}/`,
     ogImage: siteConfig.ogImage,
     jsonLd: [
@@ -27,62 +33,84 @@ export default function Home() {
       {
         "@context": "https://schema.org",
         "@type": "ProfessionalService",
-        name: "Automation & Integration Engineering",
+        name: "Full-Stack Automation & Integration Engineering",
         url: siteConfig.url,
         areaServed: "Remote",
-        serviceType: [
-          "Full-Stack Web Development",
-          "API Integrations",
-          "Workflow Automation",
-          "Node.js Backend Development",
-          "Dashboard & SaaS Development"
-        ]
+        serviceType: homeServices.map((service) => service.title)
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: homeFaqs.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer
+          }
+        }))
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "ItemList",
+        name: "Selected Case Studies",
+        itemListElement: homeCaseStudies.map((study, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          name: study.title
+        }))
       }
     ]
   });
 
   return (
     <main id="main" className="page">
-      <section className="section hero">
+      <section className="section hero" id="top">
         <div className="container hero-grid">
           <div className="hero-content">
-            <p className="eyebrow">{profile.title}</p>
+            <p className="eyebrow">Full-Stack Automation Engineer · {experienceLabel}</p>
             <h1 className="hero-title">
-              Full-Stack Automation Engineer for n8n, API Integrations, and Node.js Systems
+              Liaqat Saeed — Full-Stack Automation Engineer (n8n, API Integrations, React, Node.js)
             </h1>
             <p className="lead">
-              I help startups and product teams automate operations, connect APIs, and ship
-              reliable backend systems. 9+ years delivering workflow automation, integrations,
-              and SaaS platforms with TypeScript, Node.js, Python, and Docker.
-            </p>
-            <p className="tagline">
-              Available for remote roles, automation engagements, and integration-heavy
-              projects.
+              I have ${experienceLabel} of experience building automation workflows, API integrations, and
+              full-stack products for remote teams. I specialize in n8n, React, TypeScript, and
+              Node.js to deliver reliable backend systems, internal tools, and scalable
+              deployments for global clients.
             </p>
             <div className="cta-row">
               <a className="btn primary" href="/contact">
                 Hire Me
               </a>
               <a className="btn" href={profile.links.resume} download>
-                Download Resume
+                View Resume
               </a>
               <a className="btn ghost" href="/projects">
                 View Projects
+              </a>
+              <a className="btn ghost" href="/contact">
+                Contact Me
               </a>
             </div>
             <div className="trust-grid">
               <div>
                 <p className="trust-label">Experience</p>
-                <p className="trust-value">9+ Years</p>
+                <p className="trust-value">{experienceLabel}</p>
               </div>
               <div>
                 <p className="trust-label">Specialties</p>
-                <p className="trust-value">n8n, APIs, Backend Automation</p>
+                <p className="trust-value">n8n, API Integrations, Automation</p>
               </div>
               <div>
-                <p className="trust-label">Tech</p>
-                <p className="trust-value">React, Next.js, Node.js, TypeScript</p>
+                <p className="trust-label">Stack</p>
+                <p className="trust-value">React, TypeScript, Node.js, Python</p>
               </div>
+            </div>
+            <div className="hero-links">
+              <a href="#services">Services</a>
+              <a href="#case-studies">Case Studies</a>
+              <a href="#why-hire">Why Hire Me</a>
+              <a href="#faq">FAQ</a>
             </div>
           </div>
           <div className="hero-card" aria-label="Profile snapshot">
@@ -95,43 +123,43 @@ export default function Home() {
               <div>
                 <p className="meta-label">Focus</p>
                 <ul className="meta-list">
-                  <li>Workflow Automation</li>
-                  <li>API Integrations</li>
-                  <li>Backend Systems</li>
-                  <li>Deployments</li>
+                  <li>Workflow automation and API orchestration</li>
+                  <li>Internal tools and dashboards</li>
+                  <li>Full-stack delivery with deployment support</li>
                 </ul>
               </div>
             </div>
             <div className="hero-links">
-              <span>Remote-first, async-friendly collaboration</span>
-              <span>Automation + integration delivery</span>
+              <span>Remote-first · Async friendly · Global teams</span>
+              <span>Automation + integrations specialist</span>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="services">
         <div className="container">
           <div className="section-heading">
-            <h2>What I Help Build</h2>
-            <p>Outcome-focused delivery for teams that need automation and integrations fast.</p>
+            <h2>Services</h2>
+            <p>Focused delivery for automation, integrations, and full-stack systems.</p>
           </div>
           <div className="service-grid">
-            <article className="service-card">
-              <h3>Automation Workflows</h3>
-              <p>n8n workflows, API orchestration, and automated data pipelines.</p>
-              <p className="service-outcome">Reduce manual ops and improve reliability.</p>
-            </article>
-            <article className="service-card">
-              <h3>API Integrations</h3>
-              <p>Secure integrations across SaaS platforms, payment systems, and internal tools.</p>
-              <p className="service-outcome">Connect systems and unlock real-time data.</p>
-            </article>
-            <article className="service-card">
-              <h3>Full-Stack Platforms</h3>
-              <p>React/Next.js dashboards paired with robust Node.js backend services.</p>
-              <p className="service-outcome">Ship scalable SaaS features with confidence.</p>
-            </article>
+            {homeServices.map((service) => (
+              <article className="service-card" key={service.title}>
+                <h3>{service.title}</h3>
+                <p>{service.description}</p>
+                <ul className="service-list">
+                  {service.bullets.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+                {service.cta && (
+                  <a className="text-link" href={service.cta.href}>
+                    {service.cta.label}
+                  </a>
+                )}
+              </article>
+            ))}
           </div>
           <div className="section-cta">
             <a className="btn" href="/services">
@@ -141,54 +169,80 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="case-studies">
         <div className="container">
           <div className="section-heading">
             <h2>Selected Case Studies</h2>
-            <p>Proof of delivery across automation, integrations, and SaaS platforms.</p>
+            <p>Real-world automation, integration, and platform work.</p>
           </div>
-          <div className="projects-grid">
-            {profile.projects.slice(0, 3).map((project) => (
-              <article className="project-card" key={project.title}>
-                <div>
-                  <h3>{project.title}</h3>
-                  <p>{project.description}</p>
-                  <div className="chip-row">
-                    {project.stack.map((chip) => (
-                      <span className="chip" key={chip}>
-                        {chip}
-                      </span>
-                    ))}
-                  </div>
+          <div className="case-grid">
+            {homeCaseStudies.map((study) => (
+              <article className="case-card" key={study.title}>
+                <h3>{study.title}</h3>
+                <p className="case-problem">Problem: {study.problem}</p>
+                <p className="case-meta">Role: {study.role}</p>
+                <div className="chip-row">
+                  {study.stack.map((chip) => (
+                    <span className="chip" key={chip}>
+                      {chip}
+                    </span>
+                  ))}
                 </div>
-                {project.links && (
-                  <div className="project-links">
-                    {project.links.map((link) => (
-                      <a key={link.url} href={link.url} target="_blank" rel="noreferrer">
-                        {link.label}
-                      </a>
-                    ))}
-                  </div>
+                <p className="case-outcome">Outcome: {study.outcome}</p>
+                {study.href && (
+                  <a className="text-link" href={study.href}>
+                    Read case study
+                  </a>
                 )}
               </article>
             ))}
           </div>
           <div className="section-cta">
-            <a className="btn" href="/projects">
-              View All Projects
+            <a className="btn" href="/automation-case-studies">
+              View Case Studies
             </a>
           </div>
         </div>
       </section>
 
-      <section className="section contact">
+      <section className="section" id="why-hire">
+        <div className="container">
+          <div className="section-heading">
+            <h2>Why Hire Me</h2>
+            <p>Clear proof points for recruiters, founders, and product teams.</p>
+          </div>
+          <div className="stats-grid">
+            {whyHirePoints.map((point) => (
+              <div className="stat-card" key={point}>
+                <p>{point}</p>
+              </div>
+            ))}
+          </div>
+          <div className="section-cta">
+            <a className="btn primary" href="/contact">
+              Let’s Build Your Automation
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="section" id="faq">
+        <div className="container">
+          <div className="section-heading">
+            <h2>FAQ</h2>
+            <p>Direct answers for recruiters and hiring managers.</p>
+          </div>
+          <FaqList items={homeFaqs} />
+        </div>
+      </section>
+
+      <section className="section contact" id="contact">
         <div className="container contact-grid">
           <div>
-            <h2>Open to Remote Opportunities</h2>
+            <h2>Ready to Automate?</h2>
             <p>
-              Recruiting for senior automation, integration, or full-stack roles? I partner with
-              remote teams to ship reliable workflow systems, API integrations, and SaaS
-              platforms.
+              Need workflow automation, API integrations, or a senior engineer who can own the
+              full stack? Let’s scope your project.
             </p>
           </div>
           <div className="contact-card">

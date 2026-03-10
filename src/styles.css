@@ -347,6 +347,28 @@ img {
   color: var(--text);
 }
 
+.service-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+}
+
+.text-link {
+  color: var(--accent);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.text-link:hover,
+.text-link:focus-visible {
+  color: color-mix(in srgb, var(--accent) 85%, #fff);
+}
+
 .about-grid {
   display: grid;
   gap: 28px;
@@ -419,6 +441,33 @@ img {
   padding: 24px;
   display: grid;
   gap: 18px;
+}
+
+.case-problem,
+.case-meta,
+.case-outcome {
+  margin: 0;
+  color: var(--muted);
+}
+
+.case-outcome {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stats-grid {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.stat-card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow);
+  font-weight: 600;
 }
 
 .case-header {
@@ -596,6 +645,13 @@ img {
 
 .hero-links .contact-link {
   font-weight: 600;
+}
+
+.hero-links a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .skills-grid {
@@ -859,6 +915,30 @@ img {
   display: grid;
   gap: 22px;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.grid-two {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  border: 1px solid var(--border);
+  background: var(--card);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  display: grid;
+  gap: 12px;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  display: grid;
+  gap: 8px;
 }
 
 .project-card {

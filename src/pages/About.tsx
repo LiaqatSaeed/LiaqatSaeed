@@ -2,6 +2,7 @@ import { useState } from "react";
 import { profile } from "../data/profile";
 import { siteConfig } from "../data/site";
 import { useSeo } from "../seo";
+import { formatExperienceYears } from "../utils/experience";
 
 export default function About() {
   const [activeCertId, setActiveCertId] = useState(
@@ -9,10 +10,12 @@ export default function About() {
   );
   const activeCert = profile.certificates.find((cert) => cert.id === activeCertId);
 
+  const experienceLabel = formatExperienceYears();
+
   useSeo({
     title: "About Liaqat Saeed | Full-Stack Automation Engineer",
     description:
-      "Learn about Liaqat Saeed, a senior full-stack automation engineer specializing in n8n workflows, API integrations, Node.js backends, and SaaS platforms for remote teams.",
+      `Learn about Liaqat Saeed, a senior full-stack automation engineer with ${experienceLabel} of experience in n8n workflows, API integrations, Node.js backends, and SaaS platforms for remote teams.`,
     canonical: `${siteConfig.url}/about`,
     ogImage: siteConfig.ogImage,
     jsonLd: {
@@ -32,7 +35,7 @@ export default function About() {
           <div className="section-heading">
             <h1>About Liaqat Saeed</h1>
             <p>
-              Senior full-stack automation engineer with 9+ years of experience delivering
+              Senior full-stack automation engineer with {experienceLabel} of experience delivering
               workflow systems, API integrations, and backend platforms for global teams.
             </p>
           </div>
