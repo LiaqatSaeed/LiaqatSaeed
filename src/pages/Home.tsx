@@ -73,7 +73,7 @@ export default function Home() {
               Liaqat Saeed — Full-Stack Automation Engineer (n8n, API Integrations, React, Node.js)
             </h1>
             <p className="lead">
-              I have ${experienceLabel} of experience building automation workflows, API integrations, and
+              I have {experienceLabel} of experience building automation workflows, API integrations, and
               full-stack products for remote teams. I specialize in n8n, React, TypeScript, and
               Node.js to deliver reliable backend systems, internal tools, and scalable
               deployments for global clients.

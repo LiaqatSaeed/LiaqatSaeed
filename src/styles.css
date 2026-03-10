@@ -368,7 +368,6 @@ img {
 .text-link:focus-visible {
   color: color-mix(in srgb, var(--accent) 85%, #fff);
 }
-
 .about-grid {
   display: grid;
   gap: 28px;
@@ -469,7 +468,6 @@ img {
   box-shadow: var(--shadow);
   font-weight: 600;
 }
-
 .case-header {
   display: flex;
   flex-wrap: wrap;
