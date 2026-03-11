@@ -3,16 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Redirecting…</title>
+    <title>Redirecting to Home…</title>
+    <meta http-equiv="refresh" content="0; url=/" />
+    <link rel="canonical" href="https://liaqatsaeed6777.com/" />
     <script>
       (function () {
         var pathname = window.location.pathname;
         var search = window.location.search || "";
         var hash = window.location.hash || "";
         var redirect = "/?redirect=" + encodeURIComponent(pathname + search + hash);
+        if (pathname === "/index.html") {
+          window.location.replace("/");
+          return;
+        }
         window.location.replace(redirect);
       })();
     </script>
   </head>
-  <body></body>
+  <body>
+    <p>Redirecting to home...</p>
+  </body>
 </html>
