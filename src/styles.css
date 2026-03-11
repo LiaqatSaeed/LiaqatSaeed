@@ -661,6 +661,10 @@ img {
 .hero-links a:focus-visible {
   border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
   color: var(--accent);
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 2px;
 }
 
 .skills-grid {
