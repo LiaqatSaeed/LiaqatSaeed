@@ -635,9 +635,10 @@ img {
 }
 
 .hero-links {
-  display: grid;
-  gap: 8px;
-  font-size: 0.95rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 0.9rem;
   color: var(--muted);
 }
 
@@ -646,10 +647,20 @@ img {
 }
 
 .hero-links a {
+  color: var(--text);
+  text-decoration: none;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--card) 80%, #0c1422);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+.hero-links a:hover,
+.hero-links a:focus-visible {
+  border-color: color-mix(in srgb, var(--accent) 60%, var(--border));
   color: var(--accent);
-  text-decoration: underline;
-  text-underline-offset: 3px;
-  text-decoration-thickness: 2px;
 }
 
 .skills-grid {
